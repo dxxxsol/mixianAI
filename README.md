@@ -2,6 +2,11 @@
 
 基于豆包Seedream 5.0的AI智能生图平台，输入描述即可生成精美图片。
 
+## 网页截图
+
+<img width="2880" height="1530" alt="image" src="https://github.com/user-attachments/assets/51ef329e-7e28-493b-bc56-527f859f037c" />
+<img width="2880" height="1530" alt="image" src="https://github.com/user-attachments/assets/1e82d795-ef36-486d-bc43-ed860781f65d" />
+
 ## 功能特点
 
 - **用户登录** - 支持账号密码登录
