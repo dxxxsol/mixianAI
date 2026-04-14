@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 263 40% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 263 40% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 263 40% 15%;
+    --primary: 263 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 263 30% 95%;
+    --secondary-foreground: 263 40% 20%;
+    --muted: 263 20% 96%;
+    --muted-foreground: 263 10% 50%;
+    --accent: 263 50% 95%;
+    --accent-foreground: 263 60% 40%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 263 20% 90%;
+    --input: 263 20% 90%;
+    --ring: 263 70% 50%;
+    --radius: 0.75rem;
+    
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(263 70% 55%), hsl(280 65% 50%));
+    --gradient-primary-hover: linear-gradient(135deg, hsl(263 70% 50%), hsl(280 65% 45%));
+    --gradient-subtle: linear-gradient(180deg, hsl(263 30% 98%), hsl(263 20% 96%));
+    --shadow-elegant: 0 10px 30px -10px hsl(263 70% 30% / 0.2);
+    --shadow-glow: 0 0 40px hsl(263 70% 50% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 263 40% 8%;
+    --foreground: 0 0% 98%;
+    --card: 263 40% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 263 40% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 263 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 263 30% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 263 20% 15%;
+    --muted-foreground: 263 10% 60%;
+    --accent: 263 40% 20%;
+    --accent-foreground: 263 60% 80%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 263 30% 20%;
+    --input: 263 30% 20%;
+    --ring: 263 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-2.5 rounded-full font-medium text-sm text-white bg-gradient-to-r from-[hsl(263,70%,55%)] to-[hsl(280,65%,50%)] hover:from-[hsl(263,70%,50%)] hover:to-[hsl(280,65%,45%)] transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-full font-medium text-sm text-primary bg-secondary hover:bg-accent transition-all duration-300;
+  }
+  
+  .input-primary {
+    @apply w-full px-4 py-3 rounded-xl border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all duration-300;
+  }
+  
+  .card-elegant {
+    @apply rounded-2xl border border-border bg-card shadow-elegant transition-all duration-300 hover:shadow-xl;
+  }
+}
